@@ -7,9 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow"  Width="400">
     <Grid>
-        <StackPanel>
-            <Button Click="btnWczytaj_Click" x:Name="btnWczytaj" Margin="10 10 0 0" Content="Wczytaj" HorizontalAlignment="Left" VerticalAlignment="Top" Height="62" Width="107" />
-            <ListBox x:Name="lblDane" Margin="0 10 0 10" d:ItemsSource="{d:SampleData ItemCount=5}" />
-        </StackPanel>
+        <DockPanel>
+            <StackPanel>
+                <Button Click="btnWczytaj_Click" x:Name="btnWczytaj" Margin="10 10 10 0" Content="Wczytaj" HorizontalAlignment="Left" VerticalAlignment="Top" Height="62" Width="107" />
+                <ListBox x:Name="lblDane" Margin="0 10 10 10" d:ItemsSource="{d:SampleData ItemCount=5}" />
+            </StackPanel>
+            <StackPanel>
+                <Label Margin="10 10 10 0" Content="Imie" />
+                <TextBox Margin="10 0 10 0" x:Name="imie"></TextBox>
+                <Label Margin="10 10 10 0" Content="Nazwisko" />
+                <TextBox Margin="10 0 10 0" x:Name="nazwisko"></TextBox>
+
+                <Button Content="Zapisz" Margin="10" Width="60" Height="20"
+                        x:Name="btnZapisz" Click="btnZapisz_Click" ></Button>
+            </StackPanel>
+        </DockPanel>
     </Grid>
 </Window>

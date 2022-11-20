@@ -35,5 +35,9 @@ namespace P01BazaDanych
             lblDane.ItemsSource = zawodnicy;
             lblDane.DisplayMemberPath = "DaneDoWyswietlenia";
         }
+
+        private void btnZapisz_Click(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }
