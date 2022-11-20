@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:P01BazaDanych"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow"  Width="400">
     <Grid>
-
+        <StackPanel>
+            <Button Click="btnWczytaj_Click" x:Name="btnWczytaj" Margin="10 10 0 0" Content="Wczytaj" HorizontalAlignment="Left" VerticalAlignment="Top" Height="62" Width="107" />
+            <ListBox x:Name="lblDane" Margin="0 10 0 10" d:ItemsSource="{d:SampleData ItemCount=5}" />
+        </StackPanel>
     </Grid>
 </Window>

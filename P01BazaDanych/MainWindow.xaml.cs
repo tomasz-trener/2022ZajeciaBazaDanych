@@ -1,4 +1,5 @@
-﻿using System;
+﻿using P01BazaDanych.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,16 @@ namespace P01BazaDanych
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnWczytaj_Click(object sender, RoutedEventArgs e)
+        {
+            BazaTestowaContext db = new BazaTestowaContext();
+
+            var zawodnicy = db.Osobies.ToArray();
+
+            lblDane.ItemsSource = zawodnicy;
+            lblDane.DisplayMemberPath = "DaneDoWyswietlenia";
         }
     }
 }
