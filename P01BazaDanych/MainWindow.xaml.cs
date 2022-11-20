@@ -38,6 +38,25 @@ namespace P01BazaDanych
 
         private void btnZapisz_Click(object sender, RoutedEventArgs e)
         {
+            var zaznaczony = (Osoby)lblDane.SelectedItem;
+            zaznaczony.Imie = txtImie.Text;
+            zaznaczony.Nazwisko = txtNazwisko.Text;
+
+            BazaTestowaContext db = new BazaTestowaContext();
+
+            var osobaZBazy = new Osoby() { Id = zaznaczony.Id };
+            db.Attach(osobaZBazy);
+            osobaZBazy.Imie = txtImie.Text;
+            osobaZBazy.Nazwisko = txtNazwisko.Text;
+            db.SaveChanges();
+        }
+
+        private void lblDane_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var zaznaczony = (Osoby)lblDane.SelectedItem;
+
+            txtImie.Text = zaznaczony.Imie;
+            txtNazwisko.Text = zaznaczony.Nazwisko;
         }
     }
 }
