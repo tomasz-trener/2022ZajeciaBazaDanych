@@ -1,0 +1,13 @@
+﻿serwertl.database.windows.net
+
+tomasz
+Politechnika20
+
+bazaTestowa 
+
+Scaffold-dbContext
+
+ Install-Package Microsoft.EntityFrameworkCore.Tools 
+install-package Microsoft.EntityFrameworkCore.SqlServer
+
+Scaffold-DbContext "Data Source=***;Initial Catalog=bazaTestowa;User ID=tomasz;Password=***" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
