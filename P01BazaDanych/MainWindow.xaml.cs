@@ -53,10 +53,13 @@ namespace P01BazaDanych
 
         private void lblDane_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var zaznaczony = (Osoby)lblDane.SelectedItem;
+            if (lblDane.SelectedItem != null)
+            {
+                var zaznaczony = (Osoby)lblDane.SelectedItem;
 
-            txtImie.Text = zaznaczony.Imie;
-            txtNazwisko.Text = zaznaczony.Nazwisko;
+                txtImie.Text = zaznaczony.Imie;
+                txtNazwisko.Text = zaznaczony.Nazwisko;
+            }
         }
     }
 }
